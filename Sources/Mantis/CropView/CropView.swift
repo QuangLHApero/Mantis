@@ -547,6 +547,8 @@ extension CropView {
                 let zoomRect = convert(scaleFrame,
                                        to: cropWorkbenchView.imageContainer)
                 cropWorkbenchView.zoom(to: zoomRect, animated: false)
+            } else {
+                cropWorkbenchView.zoomScaleToBound(animated: false)
             }
             cropWorkbenchView.updateContentOffset()
             makeSureImageContainsCropOverlay()
